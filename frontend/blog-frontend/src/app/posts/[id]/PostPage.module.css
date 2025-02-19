@@ -1,0 +1,48 @@
+/* PostPage.module.css */
+
+/* Container around the page */
+.container {
+    padding-top: 50px; /* Add space at the top */
+  }
+  
+  /* Title Styling */
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Image Styling */
+  .image {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+  }
+  
+  /* Section Styling */
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  /* Section Title Styling */
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Section Content Styling */
+  .sectionContent {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Quote Styling */
+  .quote {
+    border-left: 5px solid #ddd;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    font-style: italic;
+    color: #333;
+  }

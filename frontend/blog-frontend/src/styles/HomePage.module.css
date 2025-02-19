@@ -1,0 +1,9 @@
+
+
+.posts-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards */
+    gap: 10px; /* Reduce space between cards */
+    padding: 20px;
+  }

@@ -1,0 +1,72 @@
+
+.card {
+  width: 350px; /* Increase width */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 15px; /* Reduce horizontal space while keeping spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: 200px; /* Set a fixed height */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: #555; /* Strong grey */
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.content {
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  line-height: 1.5;
+  height: 5.8em; /* Restrict text to 4 lines */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Show 4 lines max */
+  -webkit-box-orient: vertical;
+}
+
+.link {
+  display: inline-block;
+  text-align: center;
+  background: #0070f3;
+  color: white;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  background: #005bb5;
+}
+
+.bottombar {
+  width: 100%;
+  height: 3px;
+  background: #ddd; /* Delimiter bar */
+  margin: 15px 0;
+}
+
+.category {
+  font-size: 0.9rem;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+}
+  
