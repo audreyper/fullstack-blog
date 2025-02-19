@@ -1,48 +1,87 @@
+
+
 /* PostPage.module.css */
 
-/* Container around the page */
+/* Main container to center everything */
 .container {
-    padding-top: 50px; /* Add space at the top */
-  }
-  
-  /* Title Styling */
-  .title {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Image Styling */
-  .image {
-    width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto 30px;
-  }
-  
-  /* Section Styling */
-  .section {
-    margin-bottom: 40px;
-  }
-  
-  /* Section Title Styling */
-  .sectionTitle {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  /* Section Content Styling */
-  .sectionContent {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-  
-  /* Quote Styling */
-  .quote {
-    border-left: 5px solid #ddd;
-    padding-left: 20px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    font-style: italic;
-    color: #333;
-  }
+  padding-top: 100px; /* Space for navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center;
+  width: 100%;
+}
+
+/* Title Styling */
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Image Styling */
+.image {
+  width: 40%; /* Make the image smaller */
+  height: auto;
+  display: block;
+  margin: 0 auto 30px auto; /* Center the image */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 40px;
+  width: 60%; /* Keep section width balanced */
+  padding: 20px;
+  border-radius: 10px; /* Soft rounded corners */
+  text-align: center; /* Ensure content is centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensure everything inside is centered */
+  margin: 0 auto; /*Center the section itself */
+}
+
+/* Section Title Styling */
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: white;
+  text-align: center; /* Ensure title is centered */
+  width: 100%;
+}
+
+/* Section Content Styling */
+.sectionContent {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+  text-align: center; /* Make sure text is centered */
+  width: 100%; /* Ensure full width inside section */
+}
+
+/* Quote Styling */
+.quote {
+  border-left: 5px solid white;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  background-color: black; /* Match the sections */
+  font-style: italic;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center; /* Center quote text */
+  width: 80%;
+  margin: 0 auto; /* Ensure the quote is centered */
+}
+
+/* Footer Styling */
+.footer {
+  margin-top: 50px;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}

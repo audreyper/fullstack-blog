@@ -1,5 +1,4 @@
 
-
 "use client";
 import { useParams } from "next/navigation";
 import axios from "axios";
@@ -51,6 +50,10 @@ const PostPage = () => {
             );
           })}
       </div>
+      
+      <footer className={styles.footer}>
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
