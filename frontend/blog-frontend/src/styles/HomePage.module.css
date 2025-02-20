@@ -1,9 +1,23 @@
 
+.heroImage {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
 
-.posts-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center cards */
-    gap: 10px; /* Reduce space between cards */
-    padding: 20px;
-  }
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* Post Cards Section */
+.postsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 2em;
+  margin-top: 2em; 
+  padding: 0 1em; 
+}

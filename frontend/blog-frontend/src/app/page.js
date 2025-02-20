@@ -1,13 +1,13 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import PostCard from '../components/PostCard'; // Import PostCard component
-import styles from '../styles/HomePage.module.css'; // Import styles for the homepage
+import PostCard from '../components/PostCard';
+import Navbar from '../components/Navbar'; // Import Navbar
+import styles from '../styles/HomePage.module.css';
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
 
-  // Fetch blog posts from the backend
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -22,10 +22,17 @@ const HomePage = () => {
 
   return (
     <div>
-      <h1>Blog Posts</h1>
-      <div className={styles['posts-list']}>
+      <Navbar /> {/* Add navbar */}
+
+      {/* Fullscreen hero image */}
+      <div className={styles.heroImage}>
+        <img src="/hero.jpg" alt="Hero Image" />
+      </div>
+
+      {/* Blog Posts Section */}
+      <div className={styles.postsContainer}>
         {posts.map((post) => (
-          <PostCard key={post.id} post={post} /> // Display each post using PostCard component
+          <PostCard key={post.id} post={post} />
         ))}
       </div>
     </div>
