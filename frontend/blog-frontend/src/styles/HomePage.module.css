@@ -4,6 +4,7 @@
   width: 100%;
   height: 100vh; 
   overflow: hidden;
+  margin-bottom: 4rem;
 }
 
 .heroImage img {
@@ -12,12 +13,73 @@
   object-fit: cover; 
 }
 
-/* Post Cards Section */
+.heroImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1; 
+}
+
+.categoryTitle {
+  margin-bottom: 2rem; 
+  font-size: 1.5rem;    
+  font-weight: bold;    
+  color: white;          
+  text-align: center;   
+}
+
+.categoryBar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+}
+
+.categoryButton {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoryButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.selected {
+  background-color: white;
+  color: black;
+}
+
 .postsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; 
-  gap: 2em;
-  margin-top: 2em; 
-  padding: 0 1em; 
+  gap: 3rem;
+  margin-top: 5rem; 
+  margin-bottom: 5rem; 
+  padding: 0 1rem; 
+}
+
+.heroTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  color: white; 
+  text-align: center;
+  font-size: 3rem; 
+  font-family: var(--font-bebas-neue), sans-serif; 
+  font-weight: bold;
+  z-index: 10; 
 }
