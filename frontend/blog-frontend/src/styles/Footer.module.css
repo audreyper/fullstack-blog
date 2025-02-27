@@ -1,0 +1,28 @@
+
+
+  .footer {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+    margin-top: 2rem;
+  }
+  
+  .socialLinks {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .socialLinks a {
+    color: white;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .socialLinks a:hover {
+    transform: scale(1.1);
+    color: #9c60d1;
+  }
+  
