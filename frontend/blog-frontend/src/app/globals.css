@@ -3,6 +3,10 @@
   --foreground: white;
 }
 
+::selection {
+  background-color: #3db2f7; 
+  color: #000000; 
+}
 
 body {
   color: var(--foreground);

@@ -3,10 +3,13 @@
 import { useParams } from "next/navigation";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import styles from "./PostPage.module.css"; // Import the CSS module
+import Navbar from "@/components/Navbar"; 
+import Footer from "@/components/Footer";
+import styles from "./PostPage.module.css"; 
 
 const PostPage = () => {
-  const { id } = useParams(); // Get post ID from the URL
+ 
+  const { id } = useParams(); 
   const [post, setPost] = useState(null);
 
   useEffect(() => {
@@ -20,29 +23,30 @@ const PostPage = () => {
 
   if (!post) return <p>Loading...</p>;
 
-  const { content } = post; // Destructure the content array from post
+  const { content } = post; 
 
   return (
-    <div className={styles.container}> {/* Apply container class */}
-      <h1 className={styles.title}>{post.title}</h1> {/* Apply title class */}
+    <div className={styles.container}> 
+     <Navbar /> 
+      <h1 className={styles.title}>{post.title}</h1> 
       <img
         src={post.main_image}
         alt={post.title}
-        className={styles.image} // Apply image class
+        className={styles.image} 
       />
       <div>
         {content &&
           content.map((section, index) => {
             return (
-              <div key={index} className={styles.section}> {/* Apply section class */}
+              <div key={index} className={styles.section}> 
                 {section.type === "section" && (
                   <div>
-                    <h2 className={styles.sectionTitle}>{section.title}</h2> {/* Apply section title class */}
-                    <p className={styles.sectionContent}>{section.content}</p> {/* Apply section content class */}
+                    <h2 className={styles.sectionTitle}>{section.title}</h2> 
+                    <p className={styles.sectionContent}>{section.content}</p> 
                   </div>
                 )}
                 {section.type === "quote" && (
-                  <div className={styles.quote}> {/* Apply quote class */}
+                  <div className={styles.quote}> 
                     <blockquote>{section.content}</blockquote>
                   </div>
                 )}
@@ -50,10 +54,7 @@ const PostPage = () => {
             );
           })}
       </div>
-      
-      <footer className={styles.footer}>
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

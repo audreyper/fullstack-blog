@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PostCard from '../components/PostCard';
 import Navbar from '../components/Navbar'; 
+import Footer from '../components/Footer';  
 import styles from '../styles/HomePage.module.css';
 
 const HomePage = () => {
@@ -46,7 +47,7 @@ const HomePage = () => {
         <img src="/hero.jpg" alt="Hero Image" />
         {/* Title in the middle of the image */}
         <div className={styles.heroTitle}>
-          <h1>Welcome to My Corner of the Internet</h1>
+          <h1>Welcome to My Digital Playground. Let’s Build and Break Stuff! </h1>
         </div>
       </div>
       <div className={styles.categoryTitle}>
@@ -80,6 +81,7 @@ const HomePage = () => {
           <PostCard key={post.id} post={post} />
         ))}
       </div>
+      <Footer /> 
     </div>
   );
 };
