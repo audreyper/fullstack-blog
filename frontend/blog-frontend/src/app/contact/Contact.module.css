@@ -1,0 +1,121 @@
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #bdafc9;
+    margin-bottom: 0.625rem;
+    margin-top: 6rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+  
+  .content {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* Contact Form */
+  .formWrapper {
+    width: 100%;
+    max-width: 40rem;
+    background: #f7f7f7;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formWrapper h3 {
+    font-size: 2rem;
+    color: #9c60d1;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .form label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.6rem; 
+    color: black;
+    font-family: var(--font-jetbrains-mono), sans-serif; 
+    font-size: 1.2rem;
+  }
+
+
+  .inputField,
+  .textArea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #d1c4e9;
+    border-radius: 5px;
+    background: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  .inputField:focus,
+  .textArea:focus {
+    border-color: #9c60d1;
+    outline: none;
+  }
+  
+  .textArea {
+    height: 6rem;
+    resize: none;
+    font: inherit;
+  }
+  
+  .buttonWrapper {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .submitButton {
+    background: #9c60d1;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background: #7a42b0;
+  }
+  
+  .submitButton:disabled {
+    background: #b8a4d8;
+    cursor: not-allowed;
+  }
+  
+  /* Loading Spinner */
+  .submitButton img {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  
+  
