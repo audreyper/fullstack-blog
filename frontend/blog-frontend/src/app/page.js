@@ -47,7 +47,9 @@ const HomePage = () => {
         <img src="/hero.jpg" alt="Hero Image" />
         {/* Title in the middle of the image */}
         <div className={styles.heroTitle}>
-          <h1>Welcome to My Digital Playground. Let’s Build and Break Stuff! </h1>
+            <div className={styles.line}>Welcome to my digital playground</div>
+            <div className={styles.line}>Let's build and break stuff</div>
+          
         </div>
       </div>
       <div className={styles.categoryTitle}>
