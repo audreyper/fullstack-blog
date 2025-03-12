@@ -82,3 +82,32 @@
   color: white;
   text-align: center;
 }
+
+.codeBlock {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  white-space: pre-wrap; 
+  text-align: left;
+}
+
+.codeBlock code {
+  display: block;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 1rem;
+}
+
+.list li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
