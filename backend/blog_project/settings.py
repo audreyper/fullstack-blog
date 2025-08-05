@@ -32,8 +32,12 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Frontend URL (Next.js running on localhost)
+    "http://localhost:3000", 
+    'http://127.0.0.1:3000',
+      # Frontend URL (Next.js running on localhost)
 ]
+
+
 
 
 CORS_ALLOW_METHODS = [
