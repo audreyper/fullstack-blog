@@ -1,10 +1,11 @@
-'use client'
+ 'use client'
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PostCard from '../components/PostCard';
 import Navbar from '../components/Navbar'; 
 import Footer from '../components/Footer';  
 import styles from '../styles/HomePage.module.css';
+
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
@@ -47,9 +48,8 @@ const HomePage = () => {
         <img src="/hero.jpg" alt="Hero Image" />
         {/* Title in the middle of the image */}
         <div className={styles.heroTitle}>
-            <div className={styles.line}>Welcome to my digital playground</div>
-            <div className={styles.line}>Let's build and break stuff</div>
-          
+            <div className={styles.line}>Welcome to my playground</div>
+            <div className={styles.line}>Let's build and break stuff</div>    
         </div>
       </div>
       <div className={styles.categoryTitle}>

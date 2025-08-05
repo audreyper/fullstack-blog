@@ -21,9 +21,9 @@ const AboutPage = () => {
         <section className={styles.section}>
           <h2>💻 What This Blog is About</h2>
           <p>
-            This blog is where I share my experiments, struggles, and wins in the world of IT.
+            This blog is where I share my experiments, struggles, and discoveries.
             Whether it’s setting up a new exciting project in my home lab, automating a task 
-            or building with AWS, I write about what I learn—so you can learn too!
+            or building with AWS, I write about what I learn so you can learn too!
           </p>
         </section>
 

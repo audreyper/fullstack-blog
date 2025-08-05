@@ -45,8 +45,8 @@ const Contact = () => {
       <div className={styles.container}>
         {/* Hero section with heading and description */}
         <section className={styles.hero}>
-          <h1>Contact Us</h1>
-          <p>We'd love to hear from you! Please fill out the form below.</p>
+          <h1>Contact Me</h1>
+          <p> Got a question? Want to reach out to me? Please fill out the form below.</p>
         </section>
 
         {/* Contact form section */}
