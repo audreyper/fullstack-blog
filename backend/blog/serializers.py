@@ -14,9 +14,10 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ['id', 'title', 'category', 'category_id', 'main_image', 'content', 'created_at']
+        fields = ['id', 'title', 'category', 'category_id', 'main_image', 'additional_image_1', 'additional_image_2','content', 'created_at']
 
     def create(self, validated_data):
         category = validated_data.pop('category_id')
         post = Post.objects.create(category=category, **validated_data)
         return post
+    
