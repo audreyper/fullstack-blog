@@ -7,10 +7,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import styles from "./PostPage.module.css"; 
 
+
+
 const PostPage = () => {
  // Extract the post ID from the URL parameters
   const { id } = useParams(); 
   const [post, setPost] = useState(null);
+  const [enlargedImage, setEnlargedImage] = useState(null);
 
 // Fetch post data from backend API 
   useEffect(() => {
@@ -57,12 +60,32 @@ const PostPage = () => {
                     <code>{section.content}</code>
                   </pre>
                 )}
-                     {section.type === "list" && (
-                  <ul className={styles.list}> 
-                    {section.content.map((item, i) => (
-                      <li key={i}>{item}</li>
+                {section.type === "list" && (
+                    <ul className={styles.list}> 
+                      {section.content.map((item, i) => (
+                        <li key={i}>{item}</li>
                     ))}
                   </ul>
+                )}
+                    
+                {section.type === "image1" && (
+                  <div className={styles.additional_image}>
+                  <img src={post.additional_image_1} alt={section.caption || "Post image"} className={styles.image} onClick={() => setEnlargedImage(post.additional_image_1)}
+                 style={{ cursor: "zoom-in" }} />
+                {section.caption && <p className={styles.caption}>{section.caption}</p>}
+                  </div>   
+                )}
+                {section.type === "image2" && (
+                  <div className={styles.additional_image}>
+                  <img src={post.additional_image_2} alt={section.caption || "Post image"} className={styles.image} onClick={() => setEnlargedImage(post.additional_image_2)}
+                style={{ cursor: "zoom-in" }}/>
+                {section.caption && <p className={styles.caption}>{section.caption}</p>}
+                  </div>   
+                )}
+                {enlargedImage && (
+                  <div className={styles.modal} onClick={() => setEnlargedImage(null)}>
+                 <img src={enlargedImage} alt="Enlarged" className={styles.modalImage} />
+                 </div>
                 )}
               </div>
             );
@@ -70,6 +93,7 @@ const PostPage = () => {
       </div>
       <Footer />
     </div>
+    
   );
 };
 
