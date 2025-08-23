@@ -30,31 +30,12 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", 
-    'http://127.0.0.1:3000',
-      # Frontend URL (Next.js running on localhost)
-]
-
-
-
+CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
 
 CORS_ALLOW_METHODS = [
     "GET",
     "POST",
     "PUT",
-]
-
-CORS_ALLOW_HEADERS = [
-    "content-type",
-    "authorization",
-    "x-requested-with",
-    "accept",
-    "origin",
-    "accept-encoding",
-    "x-csrftoken",
-    "access-control-allow-origin",
 ]
 
 CSRF_COOKIE_SECURE = os.getenv('CSRF_COOKIE_SECURE', 'False') == 'True'

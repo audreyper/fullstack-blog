@@ -14,11 +14,11 @@ const Footer = () => {
         <a href="https://github.com/audreyper" target="_blank" rel="noopener noreferrer">
           <FaGithub size={24} />
         </a>
-        <a href="https://portfolio.audreyautomates.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://audreyautomates.com" target="_blank" rel="noopener noreferrer">
           <FaGlobe size={24} />
         </a>
       </div>
-      <p>&copy; {new Date().getFullYear()} audreyautomates.com All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} blog.audreyautomates.com All rights reserved.</p>
     </footer>
   );
 };
