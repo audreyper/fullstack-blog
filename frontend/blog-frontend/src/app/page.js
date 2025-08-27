@@ -15,7 +15,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/posts/');
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/`);
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching posts:', error);
@@ -24,7 +24,7 @@ const HomePage = () => {
 
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/categories/');
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/`);
         setCategories(response.data); 
       } catch (error) {
         console.error('Error fetching categories:', error);

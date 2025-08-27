@@ -19,7 +19,7 @@ const PostPage = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://127.0.0.1:8000/api/posts/${id}/`)
+        .get(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${id}/`)
         .then((response) => setPost(response.data)) // Store fetched post data
         .catch((error) => console.error("Error fetching post:", error)); // Log any errors
     }
