@@ -1,24 +1,33 @@
 
-import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa'; // Import the icons
+import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa'; // Import social icons
 import React from "react";
 import styles from "../styles/Footer.module.css";
 
-
 const Footer = () => {
+  // Get social URLs from environment variables
+  const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL;
+  const githubUrl = process.env.NEXT_PUBLIC_GITHUB_URL;
+  const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
+
   return (
     <footer className={styles.footer}>
+      {/* Social links section */}
       <div className={styles.socialLinks}>
-        <a href="https://www.linkedin.com/in/audreyperreault/" target="_blank" rel="noopener noreferrer">
+        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={24} />
         </a>
-        <a href="https://github.com/audreyper" target="_blank" rel="noopener noreferrer">
+        <a href={githubUrl} target="_blank" rel="noopener noreferrer">
           <FaGithub size={24} />
         </a>
-        <a href="https://audreyautomates.com" target="_blank" rel="noopener noreferrer">
+        <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
           <FaGlobe size={24} />
         </a>
       </div>
-      <p>&copy; {new Date().getFullYear()} blog.audreyautomates.com All rights reserved.</p>
+
+      {/* Copyright notice */}
+      <p>
+        &copy; {new Date().getFullYear()} {process.env.NEXT_PUBLIC_SITE_TITLE} All rights reserved.
+      </p>
     </footer>
   );
 };
